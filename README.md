@@ -3,11 +3,17 @@ github-lang-correl
 
 Analyzing correlations between programming languages on GitHub (2013)
 
-*More about this data hack*
+**More about this data hack**
 
 For the article regarding this Python script, please visit:
 
 http://datascience.org.pl/recognizing-correlations-between-github-languages-2013
+
+Program uses pandas, numpy and matplotlib. Tested on Anaconda build.
+
+Polish language version of the article available at:
+
+http://oskarj.wordpress.com
 
 **License**
 
