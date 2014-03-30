@@ -1,0 +1,8 @@
+/* Fetch data from GitHub Archive using Google's BigQuery */
+select actor, repository_language, count(repository_language) as pushes
+from [githubarchive:github.timeline]
+where type='PushEvent'
+and repository_language != ''
+and PARSE_UTC_USEC(created_at) >= PARSE_UTC_USEC('2012-11-01 00:00:00')
+and PARSE_UTC_USEC(created_at) < PARSE_UTC_USEC('2013-11-01 00:00:00')
+group by actor, repository_language;
